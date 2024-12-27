@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pg 253</title>
+    <script>
+        function addSongs() {
+            var song1 = document.getElementById("song1");
+            var song2 = document.getElementById("song2");
+            var song3 = document.getElementById("song3");
+            song1.innerHTML = "Blue Suede Strings, by Elvis Pagely";
+            song2.innerHTML = "Great Objects on Fire, by Jerry JSON Lewis";
+            song3.innerHTML = "I Code the Line, by Johnny JavaScript";
+
+            // styling the songs
+            song1.style.textShadow = "2px 2px 2px red";
+            song2.style.textShadow = "2px 2px 2px blue";
+            song3.style.textShadow = "2px 2px 2px green";
+            song1.style.fontSize = "25px";
+
+            //  styling the header
+            var header = document.querySelector("h1");
+            header.style.color = "purple";
+            header.style.textShadow = "5px 5px 5px 5px gray";
+        }
+        //  to ensure that the addSongs() function is called when the page is loaded
+        window.onload = addSongs;
+    </script>
+</head>
+
+<body>
+    <h1>My playlist</h1>
+    <ul class="playlist">
+        <li id="song1"></li>
+        <li id="song2"></li>
+        <li id="song3"></li>
+    </ul>
+</body>
+
+</html>
