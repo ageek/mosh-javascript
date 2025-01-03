@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the coordinates- Pirate's Map</title>
+    <script>
+        function init() {
+            var map = document.getElementById("map")
+            map.addEventListener('click', showCoords);
+        }
+
+        function showCoords(event) {
+            var msg = document.getElementById("coords")
+            let x = event.pageX;
+            let y = event.pageY;
+            console.log('x: ' + x + ', y:' + y);
+            msg.innerHTML = "Map coordinates are: " + x + ", " + y;
+        }
+
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <img src="./media/map.jpg" alt="" id="map">
+    <p id="coords">Move mouse to find the coordinates...</p>
+</body>
+
+</html>

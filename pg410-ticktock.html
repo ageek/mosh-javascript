@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout handler</title>
+    <script>
+        var tick = true;
+        function timer() {
+            if (tick) {
+                console.log("Tick");
+                tick = false;
+            } else {
+                console.log("Tock");
+                tick = true;
+            }
+            setTimeout(timer, 1000)
+        }
+
+        window.onload = timer; 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

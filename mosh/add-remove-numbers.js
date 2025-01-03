@@ -16,6 +16,6 @@ const first = numbers.shift();
 console.log(first);
 console.log(numbers);
 
-numbers.unsp;
+// numbers.unsp;
 numbers.splice(2, 1);
 console.log(numbers);

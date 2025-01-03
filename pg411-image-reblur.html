@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image reblur</title>
+    <script>
+        function blurHandler() {
+            document.querySelectorAll("img").forEach(img => {
+                img.addEventListener("click", (event) => {
+                    // deblur on click
+                    img.src = `./media/${event.target.id}.jpg`
+
+                    //blur after tiemout expires
+                    setTimeout(() => {
+                        img.src = `./media/${event.target.id}blur.jpg`
+                    }, 2000)
+                })
+            })
+        }
+
+        window.onload = blurHandler;
+
+    </script>
+</head>
+
+<body>
+    <img src="./media/zeroblur.jpg" alt="" id="zero">
+    <img src="./media/oneblur.jpg" alt="" id="one">
+    <img src="./media/twoblur.jpg" alt="" id="two">
+    <img src="./media/threeblur.jpg" alt="" id="three">
+    <img src="./media/fourblur.jpg" alt="" id="four">
+    <img src="./media/fiveblur.jpg" alt="" id="five">
+</body>
+
+</html>

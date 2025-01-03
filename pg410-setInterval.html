@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval test</title>
+
+    <script>
+        var tick = true;
+        function timer() {
+            if (tick) {
+                console.log("Tick")
+                tick = false;
+            } else {
+                console.log("Tock");
+                tick = true;
+            }
+        }
+        setInterval(timer, 1000)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
