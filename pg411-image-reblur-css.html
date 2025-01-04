@@ -12,9 +12,11 @@
                 img.addEventListener("click", (event) => {
                     console.log(event.target.id)
                     // transition to blur the image in 2 seconds
-                    event.target.style.filter = "blur(5px)";
+                    event.target.style.filter = "blur(15px)";
                     event.target.style.transition = "2s";
 
+                })
+                img.addEventListener("mouseout", (event) => {
                     //set time out to deblur in 2 seconds
                     setTimeout(() => {
                         event.target.style.filter = "blur(0)"
