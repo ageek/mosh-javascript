@@ -28,7 +28,7 @@ StopWatch.prototype.stop = function () {
 
 StopWatch.prototype.reset = function () {
   this.running = false;
-  this.duration = 0;
+  this._duration = 0;
   this.startTime = null;
   this.endTime = null;
 };
