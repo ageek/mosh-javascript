@@ -13,23 +13,23 @@ function StopWatch() {
 // move to Prototype, all private members now must be made public (using this) to be used by
 // Prototype methods
 StopWatch.prototype.start = function () {
-  if (running) throw Error("StopWatch is already running");
-  running = true;
-  startTime = new Date();
+  if (this.running) throw Error("StopWatch is already running");
+  this.running = true;
+  this.startTime = new Date();
 };
 
 StopWatch.prototype.stop = function () {
-  if (!running) throw Error("StopWatch is not running");
-  running = false;
-  endTime = new Date();
-  duration += (endTime - startTime) / 1000;
+  if (!this.running) throw Error("StopWatch is not running");
+  this.running = false;
+  this.endTime = new Date();
+  this.duration += (this.endTime - this.startTime) / 1000;
 };
 
 StopWatch.prototype.reset = function () {
-  running = false;
-  duration = 0;
-  startTime = null;
-  endTime = null;
+  this.running = false;
+  this.duration = 0;
+  this.startTime = null;
+  this.endTime = null;
 };
 
 s = new StopWatch();
