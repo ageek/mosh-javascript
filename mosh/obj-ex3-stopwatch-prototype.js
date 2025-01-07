@@ -6,7 +6,7 @@ function StopWatch() {
 
   Object.defineProperty(this, "duration", {
     get: () =>
-      this.running ? (new Date() - this.startTime) / 1000 : this.duration,
+      this.running ? (new Date() - this.startTime) / 1000 : this._duration,
     // return current duration if running
   });
 }
