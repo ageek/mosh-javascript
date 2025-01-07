@@ -1,6 +1,6 @@
 function StopWatch() {
   this.running = false;
-  this.duration = 0;
+  this._duration = 0;
   this.startTime = null;
   this.endTime = null;
 
@@ -23,7 +23,7 @@ StopWatch.prototype.stop = function () {
   if (!this.running) throw Error("StopWatch is not running");
   this.running = false;
   this.endTime = new Date();
-  this.duration += (this.endTime - this.startTime) / 1000;
+  this._duration += (this.endTime - this.startTime) / 1000;
 };
 
 StopWatch.prototype.reset = function () {
