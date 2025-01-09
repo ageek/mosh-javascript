@@ -20,6 +20,9 @@ function Circle(radius) {
 //to inherit from Shape, we change the parent from Object to Shape as below
 Circle.prototype = Object.create(Shape.prototype);
 
+//as a best practive we should restore the constructor to Circle
+Circle.prototype.constructor = Circle;
+
 // this should be declared after resetting the Parent for Circle
 Circle.prototype.draw = function () {
   console.log("draw " + this.radius);
