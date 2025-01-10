@@ -3,7 +3,7 @@ function fetchData() {
     console.log("Fetching data... wait for 2 sec");
 
     setTimeout(() => {
-      const success = true;
+      const success = Math.random() >= 0.5 ? true : false;
       if (success) {
         resolve("Data fetched successfully!");
       } else {
